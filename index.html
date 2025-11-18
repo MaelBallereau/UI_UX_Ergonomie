@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Documentation UX : Persona, Empathy Map, User Journey & Flow – Adaptabilité et accessibilité LLM conformes RGAA."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Persona, Empathy Map & Journey – LLM Adaptatif & RGAA</title>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <h1>
+          Persona, Empathy Map & Journey – LLM Adaptatif & Accessibilité RGAA
+        </h1>
+        <p class="intro">
+          Ce document illustre comment un assistant LLM peut s’adapter
+          dynamiquement aux besoins d’un utilisateur, tout en respectant les
+          critères du RGAA en matière d’accessibilité numérique.
+        </p>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <section id="persona" class="section" aria-labelledby="persona-title">
+        <h2 id="persona-title">Persona</h2>
+        <div class="section-body">
+          <ul class="keyfacts">
+            <li class="img-list">
+              <img
+                src="/camille.png"
+                alt="Portrait de Camille Morel, UX writer freelance"
+                class="img"
+              />
+            </li>
+            <li><strong>Nom :</strong> Camille Morel</li>
+            <li><strong>Âge :</strong> 29 ans</li>
+            <li>
+              <strong>Situation :</strong> UX writer freelance, vit en ville,
+              utilise Android
+            </li>
+            <li>
+              <strong>Objectifs :</strong> Suivre ses dépenses, visualiser les
+              tendances, constituer une épargne, avec un accompagnement
+              personnalisé
+            </li>
+            <li>
+              <strong>Comportements :</strong> Sessions courtes (1–3 min),
+              préfère les suggestions automatiques, revue hebdomadaire via LLM
+            </li>
+            <li>
+              <strong>Compétences numériques :</strong> Solides ; apprécie les
+              systèmes explicatifs et adaptatifs
+            </li>
+            <li>
+              <strong>Handicaps :</strong> Dyslexie légère, audition partielle
+            </li>
+            <li>
+              <strong>Accessibilité :</strong>
+              Interface lisible et textuelle,
+              <span class="badge" aria-label="Accessibilité">A11Y</span> ;
+              remplacements visuels et haptiques des signaux sonores
+            </li>
+            <li>
+              <strong>Motivations :</strong> Gagner du temps, éviter les
+              erreurs, bénéficier d’un accompagnement clair et modulable
+            </li>
+            <li>
+              <strong>Frustrations :</strong> Outils rigides, manque de
+              personnalisation, absence de feedback adapté
+            </li>
+          </ul>
+          <blockquote class="quote" aria-label="Citation de Camille Morel">
+            « J’aime quand l’app apprend de mes habitudes et adapte son ton à ma
+            façon de gérer mon budget. »
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="empathy-map" class="section" aria-labelledby="empathy-title">
+        <h2 id="empathy-title">Empathy Map</h2>
+        <div class="grid empathy" role="list">
+          <div class="card" role="group" aria-labelledby="thinkfeel">
+            <h3 id="thinkfeel">Think / Feel</h3>
+            <ul>
+              <li>Se demande si son budget reste équilibré</li>
+              <li>Fierté quand le LLM reconnaît ses efforts</li>
+              <li>Confiance renforcée par des réponses adaptées</li>
+            </ul>
+          </div>
+          <div class="card" role="group" aria-labelledby="seehear">
+            <h3 id="seehear">See / Hear</h3>
+            <ul>
+              <li>Interface claire et à contraste élevé</li>
+              <li>Notifications ajustées à son rythme</li>
+              <li>
+                <strong>Audio :</strong> signaux visuels et haptiques en
+                remplacement du son seul
+              </li>
+            </ul>
+          </div>
+          <div class="card" role="group" aria-labelledby="saydo">
+            <h3 id="saydo">Say / Do</h3>
+            <ul>
+              <li>« L’assistant me parle dans mon langage. »</li>
+              <li>Confie les saisies et les résumés au LLM</li>
+              <li>Interagit via texte clair, court et structuré</li>
+            </ul>
+          </div>
+          <div class="card" role="group" aria-labelledby="painsgains">
+            <h3 id="painsgains">Pains / Gains</h3>
+            <ul>
+              <li>
+                <strong>Pains :</strong> Outils non personnalisables, contenus
+                trop denses, signaux audio exclusifs
+              </li>
+              <li>
+                <strong>Gains :</strong> LLM adaptatif, ton et complexité
+                ajustés, feedback multi-modal, conseils évolutifs
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="user-story" class="section" aria-labelledby="userstory-title">
+        <h2 id="userstory-title">User Story</h2>
+        <div class="section-body">
+          <p><strong>En tant que</strong> Camille (dyslexie légère, audition partielle),
+            <strong>je veux</strong> que l’assistant LLM m’aide à saisir et comprendre mes dépenses
+            en langage simple, avec des signaux visuels et haptiques,
+            <strong>afin de</strong> gagner du temps et éviter les erreurs sans dépendre de l’audio.</p>
+
+          <h3>Critères d’acceptation</h3>
+          <ul class="keyfacts">
+            <li><strong>Donné</strong> un reçu scanné,
+                <strong>quand</strong> le LLM lit l’OCR,
+                <strong>alors</strong> il propose une catégorie, une justification en 1 phrase et un indicateur de confiance.</li>
+            <li><strong>Donné</strong> qu’une semaine est écoulée,
+                <strong>quand</strong> j’ouvre la revue hebdomadaire,
+                <strong>alors</strong> je vois un résumé en 3 puces, 1 recommandation actionnable et aucune information uniquement sonore.</li>
+            <li><strong>Donné</strong> la détection d’une dépense inhabituelle,
+                <strong>quand</strong> l’alerte se déclenche,
+                <strong>alors</strong> une alerte visuelle + vibration apparaissent et un lien « Discuter avec le LLM » est disponible.</li>
+            <li><strong>Donné</strong> mes préférences d’accessibilité,
+                <strong>quand</strong> j’interagis avec le LLM,
+                <strong>alors</strong> le ton, le niveau de détail et le format s’adaptent automatiquement (texte clair, pas d’audio‑only).</li>
+          </ul>
+
+          <h3>Définition de Done (extrait)</h3>
+          <ul class="keyfacts">
+            <li>Contrastes conformes, focus visibles, navigation clavier OK (RGAA).</li>
+            <li>Explications en « plain language », longueur contrôlée, exemples concrets.</li>
+            <li>Alertes toujours accompagnées de signaux visuels/haptiques.</li>
+            <li>Traçabilité: justification de la catégorisation disponible à l’utilisateur.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="journey" class="section" aria-labelledby="journey-title">
+        <h2 id="journey-title">User Journey</h2>
+        <div class="mermaid" aria-label="Diagramme du parcours utilisateur">
+journey
+  title Parcours de Camille – App Budget
+  section Découverte
+    Publicité claire (texte + visuel, pas d'audio requis): 4:Camille
+  section Onboarding
+    Connexion + choix catégories: 3:Camille
+    Tutoriel concis avec sous-titres et visuels: 4:Camille
+    Configuration assistant LLM (privacy & préférences): 3:Camille
+  section Enregistrement dépense
+    Saisie rapide (montant, commerçant) + feedback visuel/haptique: 3:Camille
+    LLM propose catégorie + justification: 4:Camille
+  section Revue hebdo
+    LLM génère résumé en langage simple (cartes lisibles): 5:Camille
+  section Ajustement budget
+    Ajuster enveloppes avec reco LLM: 4:Camille
+  section Support
+    Chat LLM avec transcription/sous-titres: 5:Camille
+        </div>
+      </section>
+
+      <section id="flow" class="section" aria-labelledby="flow-title">
+        <h2 id="flow-title">User Flow</h2>
+        <div class="mermaid" aria-label="Diagramme du flux utilisateur">
+flowchart LR
+  A["Accueil"] --> B["Saisie rapide"]
+  B --> C{"Auto-suggest OK ?"}
+  C -->|Oui| D["Valider"]
+  C -->|Non| E["Choisir catégorie"]
+  E --> D
+  D --> F["Feedback clair + Snackbar + Icône visuelle"]
+  F --> M{"Besoin d'aide ?"}
+  M -->|Oui| N["Chat LLM (texte + visuel)"]
+  M -->|Non| G
+  A --> G["Revue hebdo"]
+  G --> H["Insight / Reco actionnable (textuel + visuel) par LLM"]
+  H --> I["Ajuster budget"]
+  I --> J{"Alerte ?"}
+  J -->|Oui| K["Signal visuel + Vibration (détection LLM)"]
+  J -->|Non| L["Continuer"]
+        </div>
+      </section>
+
+      <section
+        id="accessibility"
+        class="section"
+        aria-labelledby="accessibility-title"
+      >
+        <h2 id="accessibility-title">
+          Recommandations d’accessibilité et d’adaptabilité (RGAA)
+        </h2>
+        <ul class="keyfacts">
+          <li>
+            <strong>Structure :</strong> Titres hiérarchisés, balises
+            sémantiques (header, main, section, etc.), navigation clavier
+            conforme ARIA.
+          </li>
+          <li>
+            <strong>Typographie :</strong> Police lisible (Inter, Atkinson ou
+            système), taille ≥ 16 px, interlignage ≥ 1.5.
+          </li>
+          <li>
+            <strong>Contenu :</strong> Langage clair, phrases courtes,
+            alternative textuelle à chaque média, vocabulaire simplifié selon
+            profil.
+          </li>
+          <li>
+            <strong>Couleurs :</strong> Contraste minimum 4.5:1, icônes
+            accompagnées de texte, aucune information portée uniquement par la
+            couleur.
+          </li>
+          <li>
+            <strong>Interaction :</strong> Focus visible, feedback multi-modal
+            (visuel + haptique), animations < 150 ms désactivables.
+          </li>
+          <li>
+            <strong>Audio :</strong> Sous-titres, transcription systématique,
+            messages visuels alternatifs.
+          </li>
+          <li>
+            <strong>LLM :</strong> Analyse des besoins d’accessibilité, ajuste
+            le ton, la densité, et le mode de restitution pour chaque
+            utilisateur, garantissant une expérience conforme au RGAA.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      if (window.mermaid) {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: "default",
+          securityLevel: "loose",
+        });
+      }
+    </script>
+  </body>
+</html>
